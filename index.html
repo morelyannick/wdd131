@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>WDD 131 – Dynamic Web Fundamentals – Guei Tedy Yannick Morel</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals Guei Tedy Yannick Morel Web development portfolio showcasing dynamic fundamentals and personal projects.">
+    <meta name="author" content="Guei Tedy Yannick Morel">
+    <link rel="stylesheet" href="styles/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <p>This is a paragraph.</p>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/guei-yannick-aa0953261">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a
+                        href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=fra#:~:text=Mais%20maintenant%2C%20Christ,de%20son%20av%C3%A8nement.">Scripture</a>
+                </li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Guei Tedy Yannick Morel</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/My_picture.jpg" alt="Profile picture of Guei Tedy Yannick Morel" width="200" height="200">
+            <p>My name is Guei Tedy Yannick. I was born in Ivory Coast and I am still living there, in Africa. 
+                I am married with one child; I love them a lot, and they are the reason I always have the strength, power, and 
+                courage to overcome challenges in this life. I currently work in hospitality; it is very stressful, but 
+                I like it. I love to learn about technology because it is my passion, and I enjoy traveling and having fun with my 
+                family.</p>
+        </section>
+        <section class="card">
+            <h2>My Goals</h2>
+            <img src="images/projecte_image.png" alt="Image representing goals" width="200" height="200">
+            <p>My goal is to become the best software engineer and show the world that nothing is impossible if you believe in 
+                yourself and God. Through hard work, we can accomplish anything we want to.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Guei Tedy Yannick Morel. Côte d'Ivoire</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
