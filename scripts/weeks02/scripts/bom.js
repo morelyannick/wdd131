@@ -5,7 +5,10 @@ const list = document.querySelector('#list');
 // Optional: event wiring for the BOM Top 10 interface
 button.addEventListener('click', () => {
     const chapter = input.value.trim();
-    if (!chapter) return;
+    if (!chapter) {
+        input.focus();
+        return;
+    }
 
     const li = document.createElement('li');
     li.textContent = chapter;
