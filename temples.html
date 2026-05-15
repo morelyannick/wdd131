@@ -4,99 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
-    <meta name="description" content="Temple Album page with responsive gallery and hamburger navigation.">
+    <title>Temple Album | Guei Tedy Yannick Morel</title>
+    <meta name="description" content="Temple Album featuring temple images, responsive layout, and a mobile-first design.">
     <meta name="author" content="Guei Tedy Yannick Morel">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="script/temples.js" defer></script>
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/temples.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="brand">
-            <h1>Temple Album</h1>
-            <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav">
-                ☰ Menu
-            </button>
-        </div>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="header-brand">
+                <h1>Temple Album</h1>
+                <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">☰ Menu</button>
+            </div>
+            <nav id="site-navigation" class="site-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bom.htm">Old</a></li>
+                    <li><a href="media-query.html">New</a></li>
+                    <li><a href="basic-layout.html">Large</a></li>
+                    <li><a href="#">Small</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <nav id="siteNav" class="site-nav" aria-label="Main navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
-        </nav>
-    </header>
+        <main>
+            <section class="intro">
+                <h2>Discover sacred architecture with responsive design</h2>
+                <p>Browse the temple album in a mobile-first layout that scales cleanly to wider screens.</p>
+            </section>
 
-    <main>
-        <section class="intro">
-            <h2>Beautiful Temples Around the World</h2>
-            <p>A simple gallery that highlights sacred buildings through a flexible mobile-first layout and responsive
-                navigation.</p>
-        </section>
+            <section class="gallery" aria-label="Temple gallery">
+                <figure>
+                    <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple" loading="lazy">
+                    <figcaption>Salt Lake Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/paris-temple.jpg" alt="Paris Temple" loading="lazy">
+                    <figcaption>Paris Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rome-temple.jpg" alt="Rome Temple" loading="lazy">
+                    <figcaption>Rome Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lagos-temple.jpg" alt="Lagos Temple" loading="lazy">
+                    <figcaption>Lagos Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/kyoto-temple.jpg" alt="Kyoto Temple" loading="lazy">
+                    <figcaption>Kyoto Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/abidjan-temple.jpg" alt="Abidjan Temple" loading="lazy">
+                    <figcaption>Abidjan Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/abuja-temple.jpg" alt="Abuja Temple" loading="lazy">
+                    <figcaption>Abuja Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/sydney-temple.jpg" alt="Sydney Temple" loading="lazy">
+                    <figcaption>Sydney Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/mexico-city-temple.jpg" alt="Mexico City Temple" loading="lazy">
+                    <figcaption>Mexico City Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/asaba-temple.jpg" alt="Asaba Temple" loading="lazy">
+                    <figcaption>Asaba Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/bali-temple.jpg" alt="Bali Temple" loading="lazy">
+                    <figcaption>Bali Temple</figcaption>
+                </figure>
+            </section>
+        </main>
 
-        <section class="gallery" aria-label="Temple gallery">
-            <figure>
-                <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple">
-                <figcaption>Salt Lake Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/paris-temple.jpg" alt="Paris Temple">
-                <figcaption>Paris Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/rome-temple.jpg" alt="Rome Temple">
-                <figcaption>Rome Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/abidjan-temple.jpg" alt="Abidjan Temple">
-                <figcaption>Abidjan Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/abuja-temple.jpg" alt="Abuja Temple">
-                <figcaption>Abuja Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/bali-temple.jpg" alt="Bali Temple">
-                <figcaption>Bali Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kyiv-temple.jpg" alt="Kyiv Temple">
-                <figcaption>Kyiv Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/mexico-city-temple.jpg" alt="Mexico City Temple">
-                <figcaption>Mexico City Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/sydney-temple.jpg" alt="Sydney Temple">
-                <figcaption>Sydney Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/asaba-temple.jpg" alt="Asaba Temple">
-                <figcaption>Asaba Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/lagos-temple.jpg" alt="Lagos Temple">
-                <figcaption>Lagos Temple</figcaption>
-            </figure>
-
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Guei Tedy Yannick Morel. Côte d'Ivoire</p>
-        <p id="lastModified"></p>
-    </footer>
+        <footer>
+            <p>&copy; <span id="currentyear"></span> Guei Tedy Yannick Morel. Côte d'Ivoire</p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
 </body>
 
 </html>

@@ -1,116 +1,116 @@
-/* Mobile-first styling for Temple Album */
-
 :root {
-    color-scheme: light;
-    --bg: #f7f8fc;
+    --bg: #f8f5f1;
     --surface: #ffffff;
-    --primary: #2c3e50;
-    --accent: #5b8fb9;
-    --accent-soft: #d4e6f5;
-    --text: #1f2933;
-    --muted: #5f6771;
-    --radius: 18px;
+    --text: #1f2937;
+    --muted: #475569;
+    --accent: #7c3aed;
+    --accent-soft: #ede9fe;
+    --border: #d6d3d1;
 }
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--bg);
+}
+
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    border-radius: 14px;
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-header {
-    background: linear-gradient(180deg, #2c3e50 0%, #3b5a7a 100%);
-    color: #f8fafc;
-    padding: 1.5rem 1rem;
+.site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
 }
 
-.brand {
+.header-brand {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
 }
 
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.85rem;
+.site-header h1 {
     margin: 0;
+    font-size: 1.5rem;
 }
 
-.nav-toggle {
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    background: rgba(255, 255, 255, 0.08);
-    color: #f8fafc;
-    padding: 0.9rem 1rem;
-    border-radius: 999px;
-    font-size: 0.95rem;
+.menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 1rem;
     cursor: pointer;
 }
 
 .site-nav {
     margin-top: 1rem;
+    display: none;
+}
+
+.site-nav.open {
+    display: block;
 }
 
 .site-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
 
-.site-nav.open ul {
-    display: flex;
-}
-
 .site-nav a {
     display: block;
-    color: #f8fafc;
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.08);
-    padding: 0.85rem 1rem;
-    border-radius: 14px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    color: var(--text);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateX(4px);
+    background: var(--accent-soft);
+    color: var(--accent);
 }
 
 main {
-    max-width: 1000px;
+    width: min(90%, 56rem);
     margin: 1.5rem auto;
-    padding: 0 1rem 2rem;
+    flex: 1;
 }
 
 .intro {
     background: var(--surface);
-    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
     padding: 1.5rem;
-    box-shadow: 0 20px 40px rgba(44, 62, 80, 0.08);
-    border: 1px solid rgba(44, 62, 80, 0.06);
+    box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.06);
 }
 
 .intro h2 {
-    margin: 0 0 0.75rem;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: var(--accent);
 }
 
 .intro p {
@@ -125,28 +125,45 @@ main {
     margin-top: 1.5rem;
 }
 
-.gallery figure {
+figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 1rem;
     background: var(--surface);
-    padding: 1rem;
-    border-radius: var(--radius);
-    border: 1px solid rgba(44, 62, 80, 0.08);
-    box-shadow: 0 16px 32px rgba(44, 62, 80, 0.06);
+    border: 1px solid var(--border);
 }
 
-.gallery figcaption {
-    margin-top: 0.9rem;
-    font-weight: 600;
-    color: var(--primary);
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    background: var(--bg);
 }
 
 footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 1rem;
     text-align: center;
-    padding: 1.5rem 1rem;
-    background-color: #1d2b3f;
-    color: #d7e4f0;
+    color: var(--muted);
 }
 
 footer p {
-    margin: 0.3rem 0;
-    font-size: 0.95rem;
+    margin: 0.25rem 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
 }
