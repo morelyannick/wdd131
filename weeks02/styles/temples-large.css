@@ -1,0 +1,38 @@
+@media screen and (min-width: 900px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .site-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    header {
+        padding: 2rem 2rem 1.5rem;
+    }
+
+    .brand {
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    main {
+        padding: 0 2rem 2.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+    }
+
+    .gallery figure {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery figure:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 22px 40px rgba(44, 62, 80, 0.12);
+    }
+}
