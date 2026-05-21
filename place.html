@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Côte d'Ivoire - Dynamic Web Fundamentals</title>
+    <meta name="description" content="A layout showcase page for Côte d'Ivoire. Displays general details, local weather statistics for Abidjan, and dynamic wind chill calculations using JavaScript.">
+    <meta name="author" content="Guei Tedy Yannick Morel">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link CSS styles -->
+    <link rel="stylesheet" href="styles/place.css">
+    
+    <!-- Link JS with defer -->
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Côte d'Ivoire</h1>
+    </header>
+    
+    <main class="container">
+        <!-- Responsive Hero Image Section -->
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 599px)" srcset="images/hero-small.webp">
+                <source media="(min-width: 600px) and (max-width: 899px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-large.webp" alt="A vibrant street scene in Abidjan, Côte d'Ivoire, the economic capital of West Africa" loading="lazy">
+            </picture>
+        </div>
+        
+        <!-- Data / Details Section -->
+        <section class="card data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Capital:</strong> <span>Abidjan (economic)</span></li>
+                <li><strong>Population:</strong> <span>27.5 Million</span></li>
+                <li><strong>Language:</strong> <span>French</span></li>
+                <li><strong>Currency:</strong> <span>CFA Franc (XOF)</span></li>
+                <li><strong>Area:</strong> <span>322,463 km²</span></li>
+                <li><strong>Climate:</strong> <span>Tropical / Humid</span></li>
+            </ul>
+        </section>
+        
+        <!-- Weather Section -->
+        <section class="card weather-card">
+            <h2 class="weather-heading">Weather</h2>
+            <!-- Mobile Weather SVG Icon (Hidden on Desktop) -->
+            <div class="weather-icon-mobile">
+                <img src="images/weather.svg" alt="Sunny with cloud icon" class="weather-icon">
+            </div>
+            <ul>
+                <li><strong>Temperature:</strong> <span><span id="temperature">8</span>°C</span></li>
+                <li><strong>Condition:</strong> <span id="condition">Partly Cloudy</span></li>
+                <li><strong>Wind:</strong> <span><span id="wind-speed">10</span> km/h</span></li>
+                <li><strong>Wind Chill:</strong> <span id="wind-chill"></span></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Guei Tedy Yannick Morel | Côte d'Ivoire 🇨🇮</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
