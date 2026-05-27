@@ -53,7 +53,7 @@ const templeData = [
         dedicated: 'August 7, 2005',
         year: 2005,
         area: 1068,
-        image: 'images/Aba-temple.jpg'
+        image: 'images/aba-temple.jpg'
     },
     {
         name: 'Sydney Temple',
@@ -77,7 +77,7 @@ const templeData = [
         dedicated: ' June 15, 2000',
         year: 2000,
         area: 994,
-        image: 'images/Adelaide-Australia-Temple.jpg'
+        image: 'images/adelaide-australia-temple.jpg'
     },
     {
         name: 'Madrid Spain Temple',
@@ -85,7 +85,7 @@ const templeData = [
         dedicated: 'March19–21, 1999',
         year: 1999,
         area: 4225,
-        image: 'images/Madrid-Spain-Temple.jpg'
+        image: 'images/madrid-spain-temple.jpg'
     },
     {
         name: 'Barcelona Spain Temple',
@@ -93,8 +93,8 @@ const templeData = [
         dedicated: 'July 17, 2010',
         year: 2010,
         area: 2555,
-        image: 'images/Barcelona-Spain-Temple.jpg'
-    }, 
+        image: 'images/barcelona-spain-temple.jpg'
+    },
     // let's add some more temples to make the gallery more interesting
     {
         name: 'Brazzaville Republic of the Congo Temple',
@@ -102,7 +102,7 @@ const templeData = [
         dedicated: 'May 25, 2025',
         year: 2025,
         area: 16130,
-        image: 'images/Brazzaville-Republic-of-the-Congo-Temple.jpg'
+        image: 'images/brazzaville-republic-of-the-congo-temple.jpg'
     },
     {
         name: 'Dallas Texas Temple',
@@ -110,7 +110,7 @@ const templeData = [
         dedicated: '5 March, 1989',
         year: 1989,
         area: 4107,
-        image: 'images/Dallas-Texas-Temple.jpg'
+        image: 'images/dallas-texas-temple.jpg'
     },
     {
         name: 'Sacramento California Temple',
@@ -118,7 +118,7 @@ const templeData = [
         dedicated: 'May 4, 2006',
         year: 2006,
         area: 11000,
-        image: 'images/Sacramento-California-Temple.jpg'
+        image: 'images/sacramento-california-temple.jpg'
     },
     {
         name: 'Caracas Venezuela Temple',
@@ -126,7 +126,7 @@ const templeData = [
         dedicated: ' August 20, 2000',
         year: 2000,
         area: 1424,
-        image: 'images/Caracas-Venezuela-Temple.jpg'
+        image: 'images/caracas-venezuela-temple.jpg'
     }
 ];
 
@@ -195,7 +195,8 @@ function updateActiveButton(selectedKey) {
 }
 
 filterButtons.forEach((button) => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
         const filterKey = button.dataset.filter;
         renderGallery(filterKey);
         updateActiveButton(filterKey);
