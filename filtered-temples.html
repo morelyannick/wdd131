@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Explorer | Filtered Temples</title>
+    <meta name="description" content="Explore the Temple Explorer gallery and filter temples by age and size.">
+    <meta name="author" content="Yannick">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="brand-row">
+                <div class="brand-logo" aria-hidden="true">⛩️</div>
+                <div>
+                    <p class="eyebrow">Temple Explorer</p>
+                    <h1>Temple Album</h1>
+                </div>
+            </div>
+
+            <nav class="site-nav" aria-label="Primary site navigation">
+                <ul class="nav-list">
+                    <li><button class="nav-button active" type="button" data-filter="home">Home</button></li>
+                    <li><button class="nav-button" type="button" data-filter="old">Old</button></li>
+                    <li><button class="nav-button" type="button" data-filter="new">New</button></li>
+                    <li><button class="nav-button" type="button" data-filter="large">Large</button></li>
+                    <li><button class="nav-button" type="button" data-filter="small">Small</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div>
+                    <p class="hero-label">Filtered Temples</p>
+                    <h2>Explore Temples Around the World</h2>
+                    <p>Browse temples and filter them by age and size.</p>
+                </div>
+                <img src="images/Jesus-Christ.jpg" alt="Jesus Christ illustration" loading="lazy">
+            </section>
+
+            <div class="status-bar" aria-live="polite">
+                <p id="filterStatus">Home: 12 temples displayed</p>
+            </div>
+
+            <section class="gallery" id="templeGallery" aria-label="Temple gallery"></section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 Yannick</p>
+            <p>Last Modified: May 27, 2026</p>
+        </footer>
+    </div>
+</body>
+
+</html>
