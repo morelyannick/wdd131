@@ -1,6 +1,10 @@
 @media screen and (min-width: 768px) {
     .site-header {
         padding: 1.25rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
     }
 
     .header-brand {
@@ -14,12 +18,14 @@
     .site-nav {
         margin-top: 0;
         display: block;
+        flex: 0 1 auto;
     }
 
     .site-nav ul {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 1rem;
+        justify-content: flex-end;
+        gap: 0.75rem;
     }
 
     .site-nav a {

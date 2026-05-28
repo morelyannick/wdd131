@@ -29,13 +29,11 @@
             </div>
 
             <nav class="site-nav" aria-label="Primary site navigation">
-                <ul class="nav-list">
-                    <li><a href="#home" class="nav-button active" data-filter="home">Home</a></li>
-                    <li><a href="#old" class="nav-button" data-filter="old">Old</a></li>
-                    <li><a href="#new" class="nav-button" data-filter="new">New</a></li>
-                    <li><a href="#large" class="nav-button" data-filter="large">Large</a></li>
-                    <li><a href="#small" class="nav-button" data-filter="small">Small</a></li>
-                </ul>
+                <a href="#home" class="nav-button active" data-filter="home">Home</a>
+                <a href="#old" class="nav-button" data-filter="old">Old</a>
+                <a href="#new" class="nav-button" data-filter="new">New</a>
+                <a href="#large" class="nav-button" data-filter="large">Large</a>
+                <a href="#small" class="nav-button" data-filter="small">Small</a>
             </nav>
         </header>
 
@@ -51,19 +49,20 @@
 
             <div class="status-bar" aria-live="polite">
                 <p id="filterStatus">Home: 12 temples displayed</p>
-                img src="images/telecharger.jpg" alt="Loading indicator" id="loadingIndicator" hidden>
             </div>
 
             <section class="gallery" id="templeGallery" aria-label="Temple gallery"></section>
+            <section class="card" aria-label="Temple card placeholder"></section>
+            <section>class="card" aria-label="Temple card placeholder"></section>
         </main>
 
         <footer class="site-footer">
             <p><span>© 2026 Yannick</span></p>
             <p>Last Modified: May 27, 2026</p>
-            <nav aria-label="Footer links">
+            <div class="footer-links">
                 <a href="#home">Home</a> |
                 <a href="#about">About</a>
-            </nav>
+            </div>
         </footer>
     </div>
 </body>

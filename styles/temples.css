@@ -1,11 +1,15 @@
 :root {
-    --bg: #f8f5f1;
+    --bg: #f5f7fb;
     --surface: #ffffff;
-    --text: #1f2937;
-    --muted: #475569;
-    --accent: #7c3aed;
-    --accent-soft: #ede9fe;
-    --border: #d6d3d1;
+    --text: #172033;
+    --muted: #5d6b7c;
+    --accent: #0f766e;
+    --accent-dark: #115e59;
+    --accent-soft: #e7f6f3;
+    --gold: #d99b24;
+    --rose: #b8325f;
+    --border: #d8e0ea;
+    --shadow: 0 18px 45px rgba(16, 32, 51, 0.12);
 }
 
 * {
@@ -16,7 +20,10 @@ html {
     font-family: 'Nunito', sans-serif;
     line-height: 1.5;
     color: var(--text);
-    background: var(--bg);
+    background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 34rem),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 40%);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -30,9 +37,14 @@ body {
 }
 
 .site-header {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    color: #ffffff;
+    background: rgba(16, 32, 51, 0.96);
+    border-bottom: 3px solid var(--gold);
     padding: 1rem;
+    box-shadow: 0 10px 30px rgba(16, 32, 51, 0.2);
 }
 
 .header-brand {
@@ -45,6 +57,7 @@ body {
 .site-header h1 {
     margin: 0;
     font-size: 1.5rem;
+    color: #ffffff;
 }
 
 .menu-toggle {
@@ -53,11 +66,18 @@ body {
     justify-content: center;
     padding: 0.75rem 1rem;
     border: 1px solid var(--border);
-    border-radius: 0.75rem;
-    background: var(--accent-soft);
-    color: var(--accent);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     font-size: 1rem;
     cursor: pointer;
+    transition: transform 0.22s ease, background-color 0.22s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+    background: var(--accent);
+    transform: translateY(-2px);
 }
 
 .site-nav {
@@ -79,18 +99,53 @@ body {
 }
 
 .site-nav a {
+    position: relative;
     display: block;
+    overflow: hidden;
     text-decoration: none;
-    color: var(--text);
+    color: #ffffff;
     padding: 0.75rem 1rem;
-    border-radius: 0.75rem;
-    transition: background 0.25s ease, color 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    white-space: nowrap;
+    animation: navTyping 0.8s steps(12, end) both;
+    transition: transform 0.22s ease, background-color 0.22s ease, border-color 0.22s ease;
+}
+
+.site-nav li:nth-child(2) a {
+    animation-delay: 0.12s;
+}
+
+.site-nav li:nth-child(3) a {
+    animation-delay: 0.24s;
+}
+
+.site-nav li:nth-child(4) a {
+    animation-delay: 0.36s;
+}
+
+.site-nav li:nth-child(5) a {
+    animation-delay: 0.48s;
+}
+
+.site-nav a::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1rem;
+    margin-left: 0.35rem;
+    vertical-align: -0.16rem;
+    background: var(--gold);
+    animation: caretBlink 0.75s steps(1) infinite;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-    background: var(--accent-soft);
-    color: var(--accent);
+    background: var(--accent);
+    border-color: rgba(255, 255, 255, 0.55);
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 main {
@@ -102,9 +157,10 @@ main {
 .intro {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 1rem;
+    border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.06);
+    box-shadow: var(--shadow);
+    animation: riseIn 0.65s ease both;
 }
 
 .intro h2 {
@@ -126,32 +182,63 @@ main {
 }
 
 figure {
+    position: relative;
     margin: 0;
     overflow: hidden;
-    border-radius: 1rem;
+    border-radius: 8px;
     background: var(--surface);
     border: 1px solid var(--border);
+    box-shadow: 0 12px 30px rgba(16, 32, 51, 0.08);
+    animation: cardIn 0.55s ease both;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+figure:nth-child(3n + 1) {
+    border-top: 5px solid var(--accent);
+}
+
+figure:nth-child(3n + 2) {
+    border-top: 5px solid var(--gold);
+}
+
+figure:nth-child(3n + 3) {
+    border-top: 5px solid var(--rose);
+}
+
+figure:hover,
+figure:focus-within {
+    border-color: rgba(15, 118, 110, 0.45);
+    box-shadow: 0 22px 45px rgba(16, 32, 51, 0.16);
+    transform: translateY(-6px);
 }
 
 figure img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
     display: block;
+    background: #d8e0ea;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+figure:hover img {
+    filter: saturate(1.12) contrast(1.05);
+    transform: scale(1.07);
 }
 
 figcaption {
     padding: 1rem;
     font-weight: 700;
     color: var(--text);
-    background: var(--bg);
+    background: var(--surface);
 }
 
 footer {
-    background: var(--surface);
-    border-top: 1px solid var(--border);
+    background: #102033;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1rem;
     text-align: center;
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.78);
 }
 
 footer p {
@@ -164,6 +251,47 @@ footer p {
     *::before,
     *::after {
         scroll-behavior: auto !important;
+        animation: none !important;
         transition: none !important;
+    }
+}
+
+@keyframes navTyping {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes caretBlink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes riseIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
