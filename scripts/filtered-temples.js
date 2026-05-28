@@ -53,7 +53,7 @@ const templeData = [
         dedicated: 'August 7, 2005',
         year: 2005,
         area: 1068,
-        image: 'images/aba-temple.jpg'
+        image: 'images/abatemple.jpg'
     },
     {
         name: 'Sydney Temple',
@@ -77,7 +77,7 @@ const templeData = [
         dedicated: ' June 15, 2000',
         year: 2000,
         area: 994,
-        image: 'images/adelaide-australia-temple.jpg'
+        image: 'images/adelaideaustralia-temple.jpg'
     },
     {
         name: 'Madrid Spain Temple',
@@ -85,7 +85,7 @@ const templeData = [
         dedicated: 'March19–21, 1999',
         year: 1999,
         area: 4225,
-        image: 'images/madrid-spain-temple.jpg'
+        image: 'images/madridspain-temple.jpg'
     },
     {
         name: 'Barcelona Spain Temple',
@@ -102,7 +102,7 @@ const templeData = [
         dedicated: 'May 25, 2025',
         year: 2025,
         area: 16130,
-        image: 'images/brazzaville-republic-of-the-congo-temple.jpg'
+        image: 'images/brazzavillerepublic-of-the-congo-temple.jpg'
     },
     {
         name: 'Dallas Texas Temple',
@@ -110,7 +110,7 @@ const templeData = [
         dedicated: '5 March, 1989',
         year: 1989,
         area: 4107,
-        image: 'images/dallas-texas-temple.jpg'
+        image: 'images/dallastexas-temple.jpg'
     },
     {
         name: 'Sacramento California Temple',
@@ -126,7 +126,7 @@ const templeData = [
         dedicated: ' August 20, 2000',
         year: 2000,
         area: 1424,
-        image: 'images/caracas-venezuela-temple.jpg'
+        image: 'images/caracasvenezuela-temple.jpg'
     }
 ];
 
