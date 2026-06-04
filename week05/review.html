@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/review.js" defer></script>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="page-header">
+            <div>
+                <p class="eyebrow">Review Confirmation</p>
+                <h1>Thank you for your submission</h1>
+                <p class="intro">Your product review has been received. The details below summarize the information you provided.</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="review-summary" aria-live="polite">
+                <p id="confirmationMessage">Loading your review summary...</p>
+                <dl id="reviewDetails" class="review-details"></dl>
+                <p id="errorMessage" class="error-message"></p>
+                <p class="review-count">Reviews completed: <span id="reviewCount">0</span></p>
+                <div class="review-links">
+                    <a href="form.html">Submit another review</a>
+                    <a href="bom.html">Back to Week 05 Project</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; <span id="currentyear"></span> Guei Tedy Yannick Morel. Côte d'Ivoire</p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
+</body>
+</html>
