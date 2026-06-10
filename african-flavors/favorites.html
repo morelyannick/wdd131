@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites | African Flavors</title>
+    <meta name="description"
+        content="Find your favorite African dishes saved locally in your browser with African Flavors." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand">African Flavors</a>
+            <nav class="main-nav" aria-label="Navigation principale">
+                <a href="index.html">Home</a>
+                <a href="countries.html">Countries</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="references.html">References</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section page-hero small-hero">
+            <div class="container">
+                <span class="eyebrow">Favorites</span>
+                <h1>Your saved dishes</h1>
+                <p>Quickly find the recipes you added to your favorites from the Countries page.</p>
+            </div>
+        </section>
+
+        <section class="section dish-list-section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Saved favorites</h2>
+                    <p>Content is stored in your browser using localStorage.</p>
+                </div>
+                <div id="favorites-list" class="grid-cards"></div>
+                <p id="favorites-empty" class="empty-state">You don’t have any favorites yet. Go to the “Countries” page
+                    to add some.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 🌍African Flavors. Site built with HTML, CSS, and vanilla JavaScript.</p>
+            <nav aria-label="Footer links">
+                <a href="home.html">Home</a>
+                <a href="countries.html">Countries</a>
+                <a href="references.html">References</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

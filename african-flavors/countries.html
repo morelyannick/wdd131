@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries | African Flavors</title>
+    <meta name="description"
+        content="Explore 10 African countries and discover traditional dishes, their stories, ingredients, and serving tips." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="home.html" class="brand">African Flavors</a>
+            <nav class="main-nav" aria-label="Navigation principale">
+                <a href="home.html">Home</a>
+                <a href="countries.html">Countries</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="references.html">References</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section page-hero small-hero">
+            <div class="container">
+                <span class="eyebrow">Countries & Dishes</span>
+                <h1>10 countries, 60 dishes—an unforgettable culinary adventure</h1>
+                <p>Filter by country, search a dish, and explore authentic recipes with stories, ingredients,
+                    and spice levels.</p>
+            </div>
+        </section>
+
+        <section class="section controls">
+            <div class="container control-bar">
+                <div>
+                    <label for="country-filter">Filter by country</label>
+                    <select id="country-filter">
+                        <option value="all">All countries</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="search-input">Search</label>
+                    <input id="search-input" type="search" placeholder="Search for a dish, a country, or a flavor" />
+                </div>
+                <div>
+                    <label for="currency-select">Currency</label>
+                    <select id="currency-select">
+                        <option value="XOF">XOF</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="section dish-list-section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Dish list</h2>
+                    <p>Pick a dish and save it to your favorites so you can find it easily later.</p>
+                </div>
+                <div id="dish-list" class="grid-cards"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 🍀African Flavors. Site built with HTML, CSS, and vanilla JavaScript.</p>
+            <nav aria-label="Footer links">
+                <a href="home.html">Home</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="references.html">References</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
